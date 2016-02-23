@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Users</title>
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="/javascripts/users_client.js"></script>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+    </head>
+    <body>
+        <h1>Name : <%= username %></h1>
+        <p>Phone : <%= phone %></p>
+        
+        <form action="/users" method="post">
+            <input type="text" name="username" id="username"/>
+            <input type="text" name="phone" id="phone"/>
+            <input type="submit"/>
+        </form>
+        
+        <button id="btnAjaxRestCall">Rest</button>
+        <button id="btnAjaxPostCall">Post</button>
+        
+        <div id="ajaxResponse"></div>
+    </body>
+</html>
